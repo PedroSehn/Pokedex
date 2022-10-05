@@ -18,7 +18,7 @@ import steel from './SteelIC_Big.png'
 import unknown from './UnknownIC_Big.png'
 import water from './WaterIC_Big.png'
 
-export const type = {
+const Types = {
     bug: bug,
     dark: dark,
     dragon: dragon,
@@ -39,3 +39,5 @@ export const type = {
     unknown: unknown,
     water: water,
 }
+
+export default Types;
