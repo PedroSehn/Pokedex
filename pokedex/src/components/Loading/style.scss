@@ -1,0 +1,15 @@
+.Loading{
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .pokeball-gif{
+    max-width: 80vw;
+  }
+
+  .loading-text{
+    font-size: 10vw
+  }
+}

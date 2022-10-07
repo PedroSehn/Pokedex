@@ -4,6 +4,7 @@ import './index.css';
 import App from './components/App/App';
 import reportWebVitals from './reportWebVitals';
 import Provider from './components/Context/Provider'
+import './fonts/pokemon-ds-font.ttf';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -12,6 +12,7 @@ export const filterPokemonData = (pokemonData) => {
         name,
         abilities: filteredAbilities,
         sprites: {
+            static: sprites.versions['generation-v']['black-white'].front_default,
             male: sprites.versions['generation-v']['black-white'].animated.front_default,
             female: sprites.versions['generation-v']['black-white'].animated.front_female || null,
         },

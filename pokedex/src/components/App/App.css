@@ -1,0 +1,6 @@
+.App {
+  box-sizing: border-box;
+  font-family: 'pokemon-ds';
+  min-height: 100vh;
+  max-width: 100%;
+}

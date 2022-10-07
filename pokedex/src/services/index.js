@@ -1,7 +1,7 @@
 import  { filterPokemonData } from '../utils/filterData'
 
 const BASE_URL = 'https://pokeapi.co/api/v2';
-const POKEMON_LIMIT = 50;
+const POKEMON_LIMIT = 51;
 
 /*const mock = [
     {name: 'metapod', url: 'https://pokeapi.co/api/v2/pokemon/11/'}, 

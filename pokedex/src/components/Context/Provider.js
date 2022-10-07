@@ -4,7 +4,7 @@ import { getPokemons, fetchPokemon, createPokelist } from '../../services';
 
 function Provider({ children }) {
   const [pokemons, SetPokemons] = useState([]);
-  const [fetching, SetFetching] = useState(false);
+  const [fetching, SetFetching] = useState(true);
   const [highestId, SetHighestId] = useState(0);
   
   const contextValue = {
@@ -17,20 +17,24 @@ function Provider({ children }) {
   };
 
   useEffect(() => {
+    SetFetching(true)
     const array = []
     const fetchPokemonData = async () => {
       const pokemonBasicData = await getPokemons(highestId);
       const pokemonFullData = await fetchPokemon(pokemonBasicData);
       const pokemonClearData = await createPokelist(pokemonFullData);
       array.push(pokemonClearData);
-      SetPokemons(array)
+      SetPokemons(array);
       SetHighestId(highestId + 1);
+      SetFetching(false);
     }
-
+    
     fetchPokemonData()
-
+    
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+
 
   return (
     <AppContext.Provider value={ contextValue }>

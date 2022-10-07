@@ -1,8 +1,7 @@
 import React from 'react'
-import Types from '../../images/types'
 
 const Header = () => {
-    return (<header> <img src={Types.ghost} alt='type'/> </header>);
+    return (<header className='header'> <div> POKEMON </div> </header>);
 };
 
 export default  Header
