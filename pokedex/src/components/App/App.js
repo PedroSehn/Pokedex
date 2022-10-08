@@ -2,14 +2,13 @@ import React, { useContext } from 'react'
 import AppContext from "../Context/AppContext";
 import './App.css';
 import Pokedex from '../Pokedex';
-import Header from '../Header'
+// import Header from '../Header'
 import Loading from '../Loading';
 
 function App() {
   const { fetching } = useContext(AppContext);
   return (
     <div className="App">
-      <Header />
       { fetching ? <Loading /> : <Pokedex /> }
     </div>
   );

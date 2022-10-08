@@ -5,7 +5,7 @@ import './style.scss'
 const Pokemon = (props) => {
   const { abilities, id, name, sprites, stats, types} = props.pokemon;
   return(
-    <div className='pokemon-card' key={`${id + name}`}>
+    <div className={`pokemon-card ${types[0]}`} key={`${id + name}`}>
       <div className='pokemon-number'>
         <span> {`No ${id}`} </span>
       </div>
