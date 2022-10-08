@@ -75,40 +75,40 @@ background: linear-gradient(180deg, rgba(167,242,154,1) 21%, rgba(144,232,128,1)
 }
 
 .electric {
-  border: 5px solid #AAA519;
+  border: 5px solid #CCC71A;
   background: rgb(247,247,88);
   background: linear-gradient(180deg, rgba(247,247,88,1) 16%, rgba(255,255,10,1) 37%, rgba(204,199,26,1) 68%);
 
   .pokemon-number{
     span{
-      background-color: #AAA519;
-      border: 3px solid #AAA519;
+      background-color: #CCC71A;
+      border: 3px solid #CCC71A;
     }
   }
 }
 
 .ground {
-  border: 5px solid #B1924B;
+  border: 5px solid #A48232;
   background: rgb(228,173,61);
   background: linear-gradient(180deg, rgba(228,173,61,1) 16%, rgba(224,154,0,1) 37%, rgba(164,130,50,1) 68%);
 
   .pokemon-number{
     span{
-      background-color: #B1924B;
-      border: 3px solid #B1924B;
+      background-color: #A48232;
+      border: 3px solid #A48232;
     }
   }
 }
 
 .fairy {
-  border: 5px solid #D68BC7;
+  border: 5px solid #CC47B6;
   background: rgb(246,194,241);
   background: linear-gradient(180deg, rgba(246,194,241,1) 16%, rgba(255,111,226,1) 37%, rgba(204,71,182,1) 68%);
 
   .pokemon-number{
     span{
-      background-color: #D68BC7;
-      border: 3px solid #D68BC7;
+      background-color: #CC47B6;
+      border: 3px solid #CC47B6;
     }
   }
 }
