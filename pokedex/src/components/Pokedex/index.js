@@ -6,7 +6,7 @@ import { retrunAllPokemons } from '../../services';
 import './style.scss'
 
 const Pokedex = () => {
-  const { pokemons, SetPokemons,highestId, SetHighestId, SetFetching } = useContext(AppContext);
+  const { pokemons, SetPokemons,highestId, SetHighestId, SetFetching, fetching, generatePokemons } = useContext(AppContext);
   
   const fillPokedex = () => {
     return (
@@ -19,6 +19,8 @@ const Pokedex = () => {
   };
 
   const fetchPokemonData = async () => {
+    SetFetching(true)
+    console.log(generatePokemons)
     const newArray = [];
     const InfoArray = await retrunAllPokemons(highestId)
     newArray.push(...pokemons ,...InfoArray.array)
@@ -29,7 +31,7 @@ const Pokedex = () => {
 
   return(
   <div className='Pokedex'>
-    { fillPokedex() }
+    { fetching ? <div> </div> : fillPokedex() }
     <button onClick={fetchPokemonData}> Load More </button>
   </div>)
 }

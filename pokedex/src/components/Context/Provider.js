@@ -6,7 +6,6 @@ function Provider({ children }) {
   const [pokemons, SetPokemons] = useState([]);
   const [fetching, SetFetching] = useState(true);
   const [highestId, SetHighestId] = useState(0);
-  
   const contextValue = {
     pokemons,
     SetPokemons,
@@ -24,6 +23,8 @@ function Provider({ children }) {
     SetHighestId(InfoArray.newId);
     SetFetching(false);
   }
+
+  
 
   useEffect(() => {
     SetFetching(true)

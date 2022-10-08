@@ -9,7 +9,7 @@ function App() {
   const { fetching } = useContext(AppContext);
   return (
     <div className="App">
-      { fetching ? <Loading /> : <Pokedex /> }
+      {fetching ? <Loading /> : <Pokedex />}
     </div>
   );
 }
