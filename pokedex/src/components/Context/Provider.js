@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import AppContext from './AppContext';
-import { getPokemons, fetchPokemon, createPokelist } from '../../services';
+import { retrunAllPokemons } from '../../services';
 
 function Provider({ children }) {
   const [pokemons, SetPokemons] = useState([]);
@@ -16,19 +16,17 @@ function Provider({ children }) {
     SetHighestId
   };
 
+  const fetchPokemonData = async () => {
+    const newArray = [];
+    const InfoArray = await retrunAllPokemons(highestId)
+    newArray.push(...InfoArray.array)
+    SetPokemons(newArray);
+    SetHighestId(InfoArray.newId);
+    SetFetching(false);
+  }
+
   useEffect(() => {
     SetFetching(true)
-    const array = []
-    const fetchPokemonData = async () => {
-      const pokemonBasicData = await getPokemons(highestId);
-      const pokemonFullData = await fetchPokemon(pokemonBasicData);
-      const pokemonClearData = await createPokelist(pokemonFullData);
-      array.push(pokemonClearData);
-      SetPokemons(array);
-      SetHighestId(highestId + 1);
-      SetFetching(false);
-    }
-    
     fetchPokemonData()
     
   // eslint-disable-next-line react-hooks/exhaustive-deps

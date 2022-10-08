@@ -37,3 +37,13 @@ export const fetchPokemon = async (PokemonArray) => {
     await Promise.all(pokemon)
     return array;
 }
+
+export const retrunAllPokemons = async (id) => {
+    const array = []
+    const pokemonBasicData = await getPokemons(id);
+    const pokemonFullData = await fetchPokemon(pokemonBasicData);
+    const pokemonClearData = await createPokelist(pokemonFullData);
+    array.push(pokemonClearData);
+
+    return { array, newId: id + 51 };
+}
