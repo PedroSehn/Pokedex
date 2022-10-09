@@ -6,13 +6,13 @@ function Provider({ children }) {
   const [pokemons, SetPokemons] = useState([]);
   const [fetching, SetFetching] = useState(true);
   const [highestId, SetHighestId] = useState(0);
+  const [loadMore, SetLoadMore] = useState(false);
+  
   const contextValue = {
-    pokemons,
-    SetPokemons,
-    fetching, 
-    SetFetching,
-    highestId, 
-    SetHighestId
+    pokemons, SetPokemons,
+    fetching, SetFetching,
+    highestId, SetHighestId,
+    loadMore, SetLoadMore,
   };
 
   const fetchPokemonData = async () => {
@@ -24,7 +24,15 @@ function Provider({ children }) {
     SetFetching(false);
   }
 
-  
+  const loadMorePokemon = async () => {
+    console.log('buscando mais');
+    SetLoadMore(true);
+    const newPokemons = await retrunAllPokemons(highestId);
+    const newArray = pokemons.concat(newPokemons.array)
+    SetPokemons(newArray)
+    SetLoadMore(false);
+    SetHighestId(highestId + 33)
+  }
 
   useEffect(() => {
     SetFetching(true)
@@ -36,7 +44,12 @@ function Provider({ children }) {
 
 
   return (
-    <AppContext.Provider value={ contextValue }>
+    <AppContext.Provider value={ {
+      pokemons, SetPokemons,
+      fetching, SetFetching,
+      highestId, SetHighestId,
+      loadMore, SetLoadMore, 
+      loadMorePokemon} }>
       {children}
     </AppContext.Provider>
   );

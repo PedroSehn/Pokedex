@@ -3,11 +3,6 @@ import  { filterPokemonData } from '../utils/filterData'
 const BASE_URL = 'https://pokeapi.co/api/v2';
 const POKEMON_LIMIT = 33;
 
-/*const mock = [
-    {name: 'metapod', url: 'https://pokeapi.co/api/v2/pokemon/11/'}, 
-    {name: 'butterfree', url: 'https://pokeapi.co/api/v2/pokemon/12/'},
-]*/
-
 export const createPokelist = async (pokeList) => {
     const pokemons = []
     
@@ -19,8 +14,8 @@ export const createPokelist = async (pokeList) => {
     return pokemons;
 }
 
-export const getPokemons = async (lastId) => {
-    const page = `${BASE_URL}/pokemon/?limit=${POKEMON_LIMIT}&offset=${lastId}` 
+export const getPokemons = async (id) => {
+    const page = `${BASE_URL}/pokemon/?limit=${POKEMON_LIMIT}&offset=${id}` 
     const result = await fetch(page);
     const resultJSON = await result.json();
     return resultJSON.results;
@@ -43,7 +38,7 @@ export const retrunAllPokemons = async (id) => {
     const pokemonBasicData = await getPokemons(id);
     const pokemonFullData = await fetchPokemon(pokemonBasicData);
     const pokemonClearData = await createPokelist(pokemonFullData);
-    array.push(pokemonClearData);
+    array.push(...pokemonClearData);
 
     return { array, newId: id + 51 };
 }
