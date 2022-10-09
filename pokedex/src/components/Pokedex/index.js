@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import AppContext from "../Context/AppContext";
+import Loading from '../Loading';
 import Pokemon from '../Pokemon';
 
 import './style.scss'
@@ -18,7 +19,7 @@ const Pokedex = () => {
   return(
   <div className='Pokedex'>
     { fetching ? <div> </div> : fillPokedex() }
-    { loadMore ?  <div> loading more pokemon </div> : <button onClick={loadMorePokemon}> Load More </button>}
+    { loadMore ?  <Loading classe='loadMore'/> : <button onClick={loadMorePokemon}> Load More </button>}
   </div>)
 }
 

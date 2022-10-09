@@ -1,12 +1,11 @@
 import React from "react";
 import pokeball from '../../images/utils/pokeball_anim.gif'
-import './style.scss'
 
-const Loading = () => {
+const Loading = (props) => {
+  const { classe } = props;
   return(
-  <div className="Loading">
+  <div className={classe}>
     <img src={pokeball} alt='pokeball' className="pokeball-gif"/>
-    <div className="loading-text"> Loading... </div>
   </div>
   )
 }
