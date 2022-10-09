@@ -1,17 +1,17 @@
 .grass {
-  border: 5px solid #60B253;
+  border: 1vw solid #60B253;
   background: rgb(167,242,154);
-background: linear-gradient(180deg, rgba(167,242,154,1) 21%, rgba(144,232,128,1) 44%, rgba(96,178,83,1) 68%);
+  background: linear-gradient(180deg, rgba(167,242,154,1) 21%, rgba(144,232,128,1) 44%, rgba(96,178,83,1) 68%);
   .pokemon-number{
     span{
       background-color: #60B253;
-      border: 3px solid #60B253;
+      border: 1vw solid #60B253;
     }
   }
 }
 
 .fire {
-  border: 5px solid #B96C2C;
+  border: 1vw solid #B96C2C;
   background: rgb(245,165,92);
   background: linear-gradient(180deg, rgba(245,165,92,1) 16%, rgba(248,144,48,1) 37%, rgba(185,108,44,1) 68%);  
 
@@ -24,7 +24,7 @@ background: linear-gradient(180deg, rgba(167,242,154,1) 21%, rgba(144,232,128,1)
 }
 
 .water {
-  border: 5px solid #3D73BA;
+  border: 1vw solid #3D73BA;
   background: rgb(149,182,247);
   background: linear-gradient(180deg, rgba(149,182,247,1) 16%, rgba(104,152,248,1) 37%, rgba(61,115,186,1) 68%);
   .pokemon-number{
@@ -36,7 +36,7 @@ background: linear-gradient(180deg, rgba(167,242,154,1) 21%, rgba(144,232,128,1)
 }
 
 .bug {
-  border: 5px solid #79965A;
+  border: 1vw solid #79965A;
   background: rgb(186,227,162);
   background: linear-gradient(180deg, rgba(186,227,162,1) 16%, rgba(159,207,130,1) 37%, rgba(121,153,88,1) 68%);
 
@@ -49,7 +49,7 @@ background: linear-gradient(180deg, rgba(167,242,154,1) 21%, rgba(144,232,128,1)
 }
 
 .normal {
-  border: 5px solid #938E7B;
+  border: 1vw solid #938E7B;
   background: rgb(222,222,205);
   background: linear-gradient(180deg, rgba(222,222,205,1) 16%, rgba(181,181,166,1) 37%, rgba(147,142,123,1) 68%);
 
@@ -62,7 +62,7 @@ background: linear-gradient(180deg, rgba(167,242,154,1) 21%, rgba(144,232,128,1)
 }
 
 .poison {
-  border: 5px solid #B055D0;
+  border: 1vw solid #B055D0;
   background: rgb(228,176,244);
   background: linear-gradient(180deg, rgba(228,176,244,1) 16%, rgba(224,144,248,1) 37%, rgba(176,85,208,1) 68%);
 
@@ -75,7 +75,7 @@ background: linear-gradient(180deg, rgba(167,242,154,1) 21%, rgba(144,232,128,1)
 }
 
 .electric {
-  border: 5px solid #CCC71A;
+  border: 1vw solid #CCC71A;
   background: rgb(247,247,88);
   background: linear-gradient(180deg, rgba(247,247,88,1) 16%, rgba(255,255,10,1) 37%, rgba(204,199,26,1) 68%);
 
@@ -88,7 +88,7 @@ background: linear-gradient(180deg, rgba(167,242,154,1) 21%, rgba(144,232,128,1)
 }
 
 .ground {
-  border: 5px solid #A48232;
+  border: 1vw solid #A48232;
   background: rgb(228,173,61);
   background: linear-gradient(180deg, rgba(228,173,61,1) 16%, rgba(224,154,0,1) 37%, rgba(164,130,50,1) 68%);
 
@@ -101,7 +101,7 @@ background: linear-gradient(180deg, rgba(167,242,154,1) 21%, rgba(144,232,128,1)
 }
 
 .fairy {
-  border: 5px solid #CC47B6;
+  border: 1vw solid #CC47B6;
   background: rgb(246,194,241);
   background: linear-gradient(180deg, rgba(246,194,241,1) 16%, rgba(255,111,226,1) 37%, rgba(204,71,182,1) 68%);
 
@@ -114,7 +114,7 @@ background: linear-gradient(180deg, rgba(167,242,154,1) 21%, rgba(144,232,128,1)
 }
 
 .fighting {
-  border: 5px solid #c44b4b;
+  border: 1vw solid #c44b4b;
   background: rgb(252,146,146);
   background: linear-gradient(180deg, rgba(252,146,146,1) 16%, rgba(248,112,112,1) 37%, rgba(195,75,75,1) 68%);
 
@@ -127,7 +127,7 @@ background: linear-gradient(180deg, rgba(167,242,154,1) 21%, rgba(144,232,128,1)
 }
 
 .psychic {
-  border: 5px solid #B93286;
+  border: 1vw solid #B93286;
   background: rgb(215,122,182);
   background: linear-gradient(180deg, rgba(215,122,182,1) 16%, rgba(233,74,167,1) 37%, rgba(185,50,134,1) 68%);
 
@@ -140,7 +140,7 @@ background: linear-gradient(180deg, rgba(167,242,154,1) 21%, rgba(144,232,128,1)
 }
 
 .rock {
-  border: 5px solid #907a40;
+  border: 1vw solid #907a40;
   background: rgb(187,171,120);
   background: linear-gradient(180deg, rgba(187,171,120,1) 16%, rgba(200,160,72,1) 37%, rgba(144,122,64,1) 68%);
 
@@ -153,7 +153,7 @@ background: linear-gradient(180deg, rgba(167,242,154,1) 21%, rgba(144,232,128,1)
 }
 
 .ghost {
-  border: 5px solid #7a5caf;
+  border: 1vw solid #7a5caf;
   background: rgb(176,147,217);
   background: linear-gradient(180deg, rgba(176,147,217,1) 16%, rgba(168,112,248,1) 37%, rgba(122,92,175,1) 68%);
 
@@ -166,7 +166,7 @@ background: linear-gradient(180deg, rgba(167,242,154,1) 21%, rgba(144,232,128,1)
 }
 
 .ice {
-  border: 5px solid #3A998C;
+  border: 1vw solid #3A998C;
   background: rgb(143,210,209);
   background: linear-gradient(180deg, rgba(143,210,209,1) 16%, rgba(48,216,208,1) 37%, rgba(58,153,140,1) 68%);
 
@@ -179,7 +179,7 @@ background: linear-gradient(180deg, rgba(167,242,154,1) 21%, rgba(144,232,128,1)
 }
 
 .dragon {
-  border: 5px solid #df6767;
+  border: 1vw solid #df6767;
   background: rgb(158,179,217);
   background: linear-gradient(180deg, rgba(158,179,217,1) 16%, rgba(158,179,217,1) 37%, rgba(223,103,103,1) 68%);
 
@@ -192,7 +192,7 @@ background: linear-gradient(180deg, rgba(167,242,154,1) 21%, rgba(144,232,128,1)
 }
 
 .dark {
-  border: 5px solid #3e3e3e;
+  border: 1vw solid #3e3e3e;
   background: rgb(130,126,123);
   background: linear-gradient(180deg, rgba(130,126,123,1) 16%, rgba(112,106,106,1) 37%, rgba(62,62,62,1) 68%);
 
@@ -205,7 +205,7 @@ background: linear-gradient(180deg, rgba(167,242,154,1) 21%, rgba(144,232,128,1)
 }
 
 .steel {
-  border: 5px solid #a1a3b7;
+  border: 1vw solid #a1a3b7;
   background: rgb(193,195,199);
   background: linear-gradient(180deg, rgba(193,195,199,1) 16%, rgba(184,184,208,1) 37%, rgba(161,163,183,1) 68%);
 
@@ -229,7 +229,7 @@ background: linear-gradient(180deg, rgba(167,242,154,1) 21%, rgba(144,232,128,1)
   width: 28vw;
   height: 54vw;
   border-radius: 10px;
-  margin: 3px 2px;
+  margin: 1.2vw 2px;
   padding: 0.3vw;
   
   .pokemon-number{
@@ -237,7 +237,7 @@ background: linear-gradient(180deg, rgba(167,242,154,1) 21%, rgba(144,232,128,1)
     justify-content: start;
     align-items: flex-start;
     margin-left: -1vw;
-    border-radius: 0 0 200px 0px;
+    border-radius: 0 0 200px 20px;
     width: 100%;
     text-align: start;
 
@@ -245,7 +245,7 @@ background: linear-gradient(180deg, rgba(167,242,154,1) 21%, rgba(144,232,128,1)
       font-size: 7vw;
       padding: 0.5vw;
       margin-top: -1vw;
-      border-radius: 0 0 10px 0;
+      border-radius: 1.7vw 0 10px 0;
       color: white;
       text-shadow: 2px 0px 0px #606060;
       min-width: 12vw;

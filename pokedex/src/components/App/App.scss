@@ -3,6 +3,9 @@
   font-family: 'pokemon-ds';
   min-height: 100vh;
   max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   .fullScreen {
     display: flex;
