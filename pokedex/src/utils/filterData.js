@@ -9,7 +9,7 @@ export const filterPokemonData = (pokemonData) => {
 
     const filteredData = {
         id,
-        name,
+        name: name.split('-', 1)[0],
         abilities: filteredAbilities,
         sprites: {
             static: sprites.versions['generation-v']['black-white'].front_default,
