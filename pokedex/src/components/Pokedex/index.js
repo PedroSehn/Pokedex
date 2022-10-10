@@ -16,10 +16,21 @@ const Pokedex = () => {
       )
   };
 
+  window.onscroll = () => {
+    if(!fetching) {
+      const { scrollHeight, scrollTop, clientHeight } =
+      document.documentElement;
+
+      if (scrollHeight - scrollTop - 100 <= clientHeight) {
+        loadMorePokemon();
+      }
+    }
+   
+  }
   return(
   <div className='Pokedex'>
     { fetching ? <div> </div> : fillPokedex() }
-    { loadMore ?  <Loading classe='loadMore'/> : <button onClick={loadMorePokemon}> Load More </button>}
+    { loadMore &&  <Loading classe='loadMore'/> }
   </div>)
 }
 

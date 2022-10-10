@@ -231,6 +231,17 @@
   border-radius: 10px;
   margin: 1.2vw 2px;
   padding: 0.3vw;
+  animation: fadeInAnimation ease 0.5s;
+  animation-iteration-count: 0.5;
+  animation-fill-mode: forwards;
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 2;
+    }
+}
   
   .pokemon-number{
     display: flex;
