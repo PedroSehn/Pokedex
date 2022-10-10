@@ -6,7 +6,7 @@ import Pokemon from '../Pokemon';
 import './style.scss'
 
 const Pokedex = () => {
-  const { pokemons, fetching, loadMore, loadMorePokemon  } = useContext(AppContext);
+  const { pokemons, fetching, loadMorePokemon, loadMore  } = useContext(AppContext);
   
   const fillPokedex = () => {
     if(pokemons.length > 30)return (
@@ -15,28 +15,27 @@ const Pokedex = () => {
           })
       )
   };
-
+/*
   window.onscroll = () => {
     if(!fetching) {
       const fullPageHeight = document.documentElement.scrollHeight;
       const scrollTop = window.pageYOffset;
       const windowHeight = window.innerHeight;
       const currentScrollPosition = fullPageHeight - scrollTop
-      console.log(`
-      currentScrollPosition = ${currentScrollPosition}
-      windowHeight = ${windowHeight}
-      diferença = ${currentScrollPosition - windowHeight}
-      `)
+      
       if(currentScrollPosition === windowHeight){
         loadMorePokemon()
       }
     }
    
   }
+  */
+
+
   return(
   <div className='Pokedex'>
     { fetching ? <div> </div> : fillPokedex() }
-    <Loading classe='loadMore'/> 
+    {loadMore ? <Loading classe='loadMore'/> : <button onClick={ loadMorePokemon }> Load More</button> }
   </div>)
 }
 
