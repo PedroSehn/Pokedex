@@ -18,11 +18,17 @@ const Pokedex = () => {
 
   window.onscroll = () => {
     if(!fetching) {
-      const { scrollHeight, scrollTop, clientHeight } =
-      document.documentElement;
-
-      if (scrollHeight - scrollTop - 100 <= clientHeight) {
-        loadMorePokemon();
+      const fullPageHeight = document.documentElement.scrollHeight;
+      const scrollTop = window.pageYOffset;
+      const windowHeight = window.innerHeight;
+      const currentScrollPosition = fullPageHeight - scrollTop
+      console.log(`
+      currentScrollPosition = ${currentScrollPosition}
+      windowHeight = ${windowHeight}
+      diferença = ${currentScrollPosition - windowHeight}
+      `)
+      if(currentScrollPosition === windowHeight){
+        loadMorePokemon()
       }
     }
    
@@ -30,7 +36,7 @@ const Pokedex = () => {
   return(
   <div className='Pokedex'>
     { fetching ? <div> </div> : fillPokedex() }
-    { loadMore &&  <Loading classe='loadMore'/> }
+    <Loading classe='loadMore'/> 
   </div>)
 }
 

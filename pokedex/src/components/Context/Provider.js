@@ -25,7 +25,6 @@ function Provider({ children }) {
   }
 
   const loadMorePokemon = async () => {
-    console.log('buscando mais');
     SetLoadMore(true);
     const newPokemons = await retrunAllPokemons(highestId);
     const newArray = pokemons.concat(newPokemons.array)
