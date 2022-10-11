@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import AppContext from "../Context/AppContext";
 import './App.scss';
 import Pokedex from '../Pokedex';
@@ -8,6 +8,11 @@ import Loading from '../Loading';
 
 function App() {
   const { fetching } = useContext(AppContext);
+  
+  useEffect(() => {
+    window.scroll(0, 0)
+  }, [])
+
   return (
     <div className="App">
       <Header />
