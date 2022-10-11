@@ -231,6 +231,7 @@
 }
 
 .pokemon-card{
+  cursor: pointer;
   -webkit-user-select: none; /* Safari */        
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
@@ -323,6 +324,7 @@
       height: 20vw;
       
       .pokemon-type{
+        image-rendering: pixelated;
         pointer-events: none;
         -drag: none;
         user-select: none;
@@ -349,14 +351,15 @@
     margin: 1vw;
 
     &:hover{
-      box-shadow:0 0 15px gray;
-      transition: 0.5s;
+      transform: scale(1.05);
+      z-index: 2;
+      transition: 0.1s;
     }
 
     &:not(hover){
       box-shadow:0;
-      scale: 1.1;
-      transition: 0.5s;
+      scale: 1;
+      transition: 0.1s;
     }
 
     .pokemon-number{
