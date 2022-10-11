@@ -231,14 +231,16 @@
   border-radius: 10px;
   margin: 1.2vw 2px;
   padding: 0.3vw;
-  animation: fadeInAnimation ease 0.5s;
+  animation: fadeInAnimation ease 0.2s;
   animation-iteration-count: 0.5;
   animation-fill-mode: forwards;
   @keyframes fadeInAnimation {
     0% {
+      scale: 0.6;
       opacity: 0;
     }
     100% {
+      scale: 1.1;
       opacity: 2;
     }
 }
@@ -308,6 +310,13 @@
       height: 20vw;
       
       .pokemon-type{
+        pointer-events: none;
+        -drag: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
         height: 5vw;
         width: 44%;
       }
