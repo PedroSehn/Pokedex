@@ -6,7 +6,7 @@ import Pokemon from '../Pokemon';
 import './style.scss'
 
 const Pokedex = () => {
-  const { pokemons, fetching, loadMorePokemon, loadMore  } = useContext(AppContext);
+  const { pokemons, fetching, loadMorePokemon, loadMore, modal  } = useContext(AppContext);
   
   const fillPokedex = () => {
     if(pokemons.length > 30)return (

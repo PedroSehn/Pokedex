@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import ImageTypes from '../../images/types';
+import AppContext from "../Context/AppContext";
 import './style.scss'
 
 const Pokemon = (props) => {
-  const { abilities, id, name, sprites, stats, types} = props.pokemon;
+  const {  id, name, sprites, types} = props.pokemon;
+  const { modalFunction } = useContext(AppContext);
   return(
-    <div className={`pokemon-card ${types[0]}`} key={`${id + name}`}>
+    <div className={`pokemon-card ${types[0]}`} key={`${id}`} onClick={() => modalFunction(props.pokemon)}>
       <div className='pokemon-number'>
         <span> {`No ${id}`} </span>
       </div>

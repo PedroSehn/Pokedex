@@ -7,14 +7,9 @@ function Provider({ children }) {
   const [fetching, SetFetching] = useState(true);
   const [highestId, SetHighestId] = useState(0);
   const [loadMore, SetLoadMore] = useState(false);
+  const [clickedPokemon, setClickedPokemon] = useState([]);
+  const [modal, setModal] = useState(false);
   
-  const contextValue = {
-    pokemons, SetPokemons,
-    fetching, SetFetching,
-    highestId, SetHighestId,
-    loadMore, SetLoadMore,
-  };
-
   const fetchPokemonData = async () => {
     const newArray = [];
     const InfoArray = await retrunAllPokemons(highestId)
@@ -33,6 +28,11 @@ function Provider({ children }) {
     SetHighestId(highestId + 36)
   }
 
+  const modalFunction = async (pokemon) => {
+     setClickedPokemon(pokemon);
+     setModal(true);
+  }
+
   useEffect(() => {
     SetFetching(true)
     fetchPokemonData()
@@ -47,8 +47,11 @@ function Provider({ children }) {
       pokemons, SetPokemons,
       fetching, SetFetching,
       highestId, SetHighestId,
-      loadMore, SetLoadMore, 
-      loadMorePokemon} }>
+      loadMore, SetLoadMore,
+      clickedPokemon, setClickedPokemon, 
+      modal, setModal,
+      loadMorePokemon,
+      modalFunction} }>
       {children}
     </AppContext.Provider>
   );
