@@ -1,6 +1,21 @@
-.header{
-  display: none;
-}
+
+  .header {
+    margin-bottom: 3vw;
+    margin-top: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 99%;
+    height: 10vw;
+    overflow: visible;
+    background-color: #181B1D;
+    padding: 0.5vw;
+    img{
+      width: 40%;
+      height: 13vw;
+    }
+  }
+
 
 @media only screen and (min-width: 1024px) {
   .header {
