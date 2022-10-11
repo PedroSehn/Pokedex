@@ -30,7 +30,7 @@ function Provider({ children }) {
     const newArray = pokemons.concat(newPokemons.array)
     SetPokemons(newArray)
     SetLoadMore(false);
-    SetHighestId(highestId + 33)
+    SetHighestId(highestId + 36)
   }
 
   useEffect(() => {

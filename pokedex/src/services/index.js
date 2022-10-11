@@ -35,10 +35,15 @@ export const fetchPokemon = async (PokemonArray) => {
 
 export const retrunAllPokemons = async (id) => {
     const array = []
+    const sort = (a, b) => {
+        if(a.id > b.id) return 1
+        if(a.id < b.id) return -1
+        return 0
+    }
     const pokemonBasicData = await getPokemons(id);
     const pokemonFullData = await fetchPokemon(pokemonBasicData);
     const pokemonClearData = await createPokelist(pokemonFullData);
     array.push(...pokemonClearData);
-
-    return { array, newId: id + 36 };
+    array.sort(sort)
+    return { array, newId: (id + 36) };
 }
