@@ -31,3 +31,31 @@
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  .footer {
+    height: 10vw;
+    .socials{
+      width: 30%;
+      a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5vw;
+        
+        img{
+          max-height: 4.7vw;
+          width: 5vw;
+        }
+      }
+    }
+
+    .info{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      width: 50%;
+      font-size: 4vw ;
+    }
+  }
+}

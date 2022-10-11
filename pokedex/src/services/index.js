@@ -1,7 +1,7 @@
 import  { filterPokemonData } from '../utils/filterData'
 
 const BASE_URL = 'https://pokeapi.co/api/v2';
-const POKEMON_LIMIT = 33;
+const POKEMON_LIMIT = 36;
 
 export const createPokelist = async (pokeList) => {
     const pokemons = []
@@ -40,5 +40,5 @@ export const retrunAllPokemons = async (id) => {
     const pokemonClearData = await createPokelist(pokemonFullData);
     array.push(...pokemonClearData);
 
-    return { array, newId: id + 51 };
+    return { array, newId: id + 36 };
 }
