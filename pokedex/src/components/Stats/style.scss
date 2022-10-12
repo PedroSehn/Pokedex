@@ -1,0 +1,39 @@
+.Stats{
+  width: 100%;
+  height: 95%;
+  
+  .stat{
+    width: 100%;
+    height: 9vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10vw;
+    margin: 0.5vw;
+
+    .stat-name{
+      background-color: #788898;
+      color: white;
+      width: 45%;
+      
+      padding-left: 5%;
+      border-radius:  5px 0  0 5px;
+      border: 0.7vw solid black
+    }
+    .hp{ text-shadow: 3px 0px 0px #606060;}
+    .attack{ text-shadow: 3px 0px 0px #ca6767;}
+    .defese { text-shadow: 3px 0px 0px #936F5A; }
+    .spattack{ text-shadow: 3px 0px 0px #606060;}
+    .spdeffese{ text-shadow: 3px 0px 0px #487D9C; }
+    .speed{ text-shadow: 3px 0px 0px #b0be5f;}
+
+    .stat-value{
+      width: 20%;
+      margin-left: 1vw;
+      text-align: center;
+      background-color: #E0E8E8;
+      border-radius: 0 5px 5px 0 ;
+      border: 0.7vw solid black
+    }
+  }
+}
