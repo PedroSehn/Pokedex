@@ -1,15 +1,38 @@
+.hp{ text-shadow: 3px 0px 0px #606060;}
+.attack{ text-shadow: 3px 0px 0px #ca6767;}
+.defese { text-shadow: 3px 0px 0px #936F5A; }
+.spattack{ text-shadow: 3px 0px 0px #606060;}
+.spdeffese{ text-shadow: 3px 0px 0px #487D9C; }
+.speed{ text-shadow: 3px 0px 0px #b0be5f;}
+.stat-name{
+  background-color: #788898;
+  color: white; }
+.stat-value{ background-color: #E0E8E8; }
+span{color: white;
+  text-shadow: 2px 0px 0px #606060; }
+@media only screen and (max-width: 920px ){ 
 .Stats{
-  width: 100%;
+  
+  width: 95%;
   height: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+
+  span{
+    font-size: 200%;
+    margin-bottom: 1.3vw;
+  }
   
   .stat{
+    
     width: 100%;
-    height: 9vw;
+    height: 15%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 8.5vw;
-    margin: 0.5vw;
 
     .stat-name{
       background-color: #788898;
@@ -17,22 +40,55 @@
       width: 50%;
       padding-left: 5%;
       border-radius:  5px 0  0 5px;
-      border: 0.7vw solid black
+      border: 0.7vw solid black;
+      font-size: 100%;
+      
     }
-    .hp{ text-shadow: 3px 0px 0px #606060;}
-    .attack{ text-shadow: 3px 0px 0px #ca6767;}
-    .defese { text-shadow: 3px 0px 0px #936F5A; }
-    .spattack{ text-shadow: 3px 0px 0px #606060;}
-    .spdeffese{ text-shadow: 3px 0px 0px #487D9C; }
-    .speed{ text-shadow: 3px 0px 0px #b0be5f;}
 
     .stat-value{
       width: 20%;
+      font-size: 100%;
       margin-left: 1vw;
       text-align: center;
       background-color: #E0E8E8;
       border-radius: 0 5px 5px 0 ;
       border: 0.7vw solid black
+    }
+  }
+}
+}
+
+@media only screen and (min-width: 1024px) { 
+  .Stats{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    span{
+      font-size: 200%;
+      margin-bottom: 0.2vw;
+
+    }
+  }
+  .stat{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.1vw;
+    .stat-name{
+      font-size: 2.5vw;
+      width: 10vw;
+      border: 0.3vw solid black ;
+      margin-right: 0.3vw;
+      padding-left: 0.4vw;
+      border-radius: 0.3vw;
+      
+    }
+    .stat-value{
+      font-size: 2.5vw;
+      text-align: center;
+      width: 4vw;
+      border: 0.3vw solid black ;
+      border-radius: 0.3vw;
     }
   }
 }

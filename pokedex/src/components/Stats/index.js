@@ -6,6 +6,7 @@ const Stats = (props) => {
   return(
   <div className="Stats">
     <>
+    <span> STATS </span>
     <div className="stat"> 
       <div className="stat-name hp"> HP </div>
       <div className="stat-value"> {stats.hp}</div>
