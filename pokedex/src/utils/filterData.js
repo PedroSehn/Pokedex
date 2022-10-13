@@ -15,7 +15,8 @@ export const filterPokemonData = (pokemonData) => {
             static: sprites.versions['generation-v']['black-white'].front_default || 
             sprites.other['official-artwork'].front_default ||
             sprites.versions['generation-viii'].icons.front_default,
-            male: sprites.versions['generation-v']['black-white'].animated.front_default || sprites.static,
+            male: sprites.versions['generation-v']['black-white'].animated.front_default || 
+            sprites.versions['generation-v']['black-white'].front_default,
             female: sprites.versions['generation-v']['black-white'].animated.front_female || null,
         },
         stats: {
