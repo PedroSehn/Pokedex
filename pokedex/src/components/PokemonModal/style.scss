@@ -1,7 +1,7 @@
 .Modal {
   position: fixed;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: 3;
   background-color:rgba(0, 0, 0, 0.5);
   display: flex;
@@ -11,18 +11,31 @@
   left: 0;
   
   .Content{
+    padding: 3vw;
     z-index: 4;
-    width: 95%;
+    width: 83%;
     height: 90%;
     background-color: #181B1D;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    border-radius: 20px;
+    animation: fadeInModalAnimation ease 0.2s;
+    animation-iteration-count: 0.5;
+    animation-fill-mode: forwards;
+    @keyframes fadeInModalAnimation {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 2;
+      }
+  }
 
     .imageParent{
-      width: 85%;
-      height: 25%;
+      width: 55vw;
+      height: 35vw;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -32,13 +45,13 @@
       
       img{
         image-rendering: pixelated;
-        width: 17vw;
-        scale: 2.2;
+        max-width: 17vw;
+        max-height: 70%;
+        scale: 1.7;
       }
     }
 
     .pokemonInfo{
-      border-radius: 20px 20px 20px 20px;
       width: 90%;
       height: 60%;
       display: flex;
@@ -47,32 +60,36 @@
       justify-content: space-around;
 
       .name-types{
-        width: 80%;
+        width: 70vw;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        padding: 2vw;
         align-items: center;
         flex-direction: column;
         height: 20%;
         border-radius: 20px;
         .name{
-          width: 60%;
-          height: 40%;
-          text-align: center;
-          font-size: 12vw;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          font-size: 13vw;
           color: white;
           text-shadow: 2px 0px 0px #606060;
         }
 
         .types{
-          width: 50%;
-          height: 25%;
+          width: 60vw;
+          height: 27%;
           display: flex;
           justify-content: center;
           align-items: center;
           .typeImg{
+            image-rendering: pixelated;
             margin-left: 5%;
             margin-right: 5%;
             height: 100%;
+            scale: 1.2;
 
           }
         }
@@ -94,10 +111,8 @@
       }
 
       .dinaimcInfo{
-        width: 90%;
-        height: 70%;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
+        width: 70vw;
+        height: 60vw;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -108,11 +123,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 100%;
+      width: 15px;
       height: 6%;
       button{
-        width: 30%;
-        height: 95%;
+        position: fixed;
+        width: 28vw;
+        height: 7vh;
         border-radius: 25px;
         text-align: center;
         display: flex;
@@ -120,7 +136,7 @@
         justify-content: center;
         margin-bottom: 1.5vw;
         img{
-          scale: 1.5;
+          width: 40%;
         }
       }
     }
