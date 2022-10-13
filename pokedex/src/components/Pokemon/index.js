@@ -16,7 +16,7 @@ const Pokemon = (props) => {
       </div>
       
       <div className='pokemon-info-parent'>
-        <div className='pokemon-name'> {name.toUpperCase()} </div>
+        <div className='pokemon-name'> {name} </div>
         <div className='types'>
           {types.map((type, index) => <img 
             src={ ImageTypes[type] } 

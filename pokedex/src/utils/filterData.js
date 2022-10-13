@@ -9,13 +9,13 @@ export const filterPokemonData = (pokemonData) => {
 
     const filteredData = {
         id,
-        name: name.split('-', 1)[0],
+        name: name.split('-', 1)[0].toUpperCase(),
         abilities: filteredAbilities,
         sprites: {
             static: sprites.versions['generation-v']['black-white'].front_default || 
             sprites.other['official-artwork'].front_default ||
             sprites.versions['generation-viii'].icons.front_default,
-            male: sprites.versions['generation-v']['black-white'].animated.front_default,
+            male: sprites.versions['generation-v']['black-white'].animated.front_default || sprites.static,
             female: sprites.versions['generation-v']['black-white'].animated.front_female || null,
         },
         stats: {
@@ -30,4 +30,9 @@ export const filterPokemonData = (pokemonData) => {
     }
 
     return filteredData;
+}
+
+export const findEnglish = (object) => {
+    const { effect_entries } = object;
+    return effect_entries.find((item) => item.language.name === 'en')
 }
